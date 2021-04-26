@@ -1,6 +1,6 @@
 ﻿$ApplicationId = '<App ID>'
-$ApplicationSecret = '<App Secret'
-$TenantID = 'TenantID'
+$ApplicationSecret = '<App Secret>'
+$TenantID = '<TenantID>'
 $secPas = $ApplicationSecret| ConvertTo-SecureString -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential($ApplicationId, $secPas)
 $token = New-PartnerAccessToken -ApplicationId $ApplicationID -Scopes 'https://api.partnercenter.microsoft.com/user_impersonation' -ServicePrincipal -Credential $credential -Tenant $TenantID -UseAuthorizationCode
